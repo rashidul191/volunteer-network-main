@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className="bg-img">
             <Navbar bg="" variant="light">
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                <Navbar.Brand href="#home">Logo Here</Navbar.Brand>
                 <Nav className="ml-auto">
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#donation">Donation</Nav.Link>
