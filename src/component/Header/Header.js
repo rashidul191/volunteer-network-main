@@ -17,6 +17,8 @@ const Header = () => {
                 </Nav>
                
             </Navbar>
+            <br/>
+            <br/>
                 <h1 className="text-center">I GROW BY HELPING PEOPLE IN NEED.</h1>
             <Form inline>
                     <FormControl type="text" placeholder="Search" className=" " />
