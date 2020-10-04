@@ -2,26 +2,24 @@ import React from 'react';
 import logo from '../logos/Group 1329.png';
 import './Header.css';
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
-// import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     
-    // const history = useHistory()
-    const handleRegister =() =>{
-            // history.push('/register');
-            console.log("Register click done...");
-    }
     return (
         <div className="bg-img">
             <Navbar bg="" variant="light">
                 <Navbar.Brand href="#home"> <img className="main-logo" src={logo} alt=""/> </Navbar.Brand>
                 <Nav className="ml-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#donation">Donation</Nav.Link>
-                    <Nav.Link href="#events">Events</Nav.Link>
-                    <Nav.Link href="#Blog">Blog</Nav.Link>
-                    <Button variant="primary" onClick={handleRegister}>Register</Button>
-                    <Button variant="dark">Admin</Button>
+                    <div>
+                        <Link className="nav-style" to="/home"> Home</Link>
+                        <Link className="nav-style" to="/donation">Donation</Link>
+                        <Link className="nav-style" to="/event">Events</Link>
+                        <Link className="nav-style" to ="/blog">Blog</Link>                        
+                    </div>
+                    <Button className="nav-btn-style" variant="primary" >Register</Button>
+                    <Button className="nav-btn-style" variant="dark">Admin</Button>
                 </Nav>
             </Navbar>
             <br/>

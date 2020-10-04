@@ -1,9 +1,15 @@
 import React from 'react';
 import './Home.css';
-import img from '../images/animalShelter.png'
 import { Card, CardDeck } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 const Home = () => {
+    const history = useHistory()
+    const handleRegister =() =>{
+        history.push('/register');
+        console.log("Register click done...");
+}
+
     return (
         <div className="card-style">
             <CardDeck>
@@ -35,6 +41,7 @@ const Home = () => {
                     </Card.Body>
                 </Card>
             </CardDeck>
+            <button onClick={handleRegister}>click here</button>
         </div>
     );
 };

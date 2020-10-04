@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
 import mainLogo from '../logos/Group 1329.png';
 import googleImg from '../logos/google.png';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
+import { UserContext } from '../../App';
+import { useHistory, useLocation } from 'react-router-dom';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -17,12 +19,16 @@ const Login = () => {
         photo:'',
     })
 
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const history = useHistory();
+    const location = useLocation();
+
+    let { from } = location.state || { from: { pathname: "/" } };
+
     const provider = new firebase.auth.GoogleAuthProvider();
     const handleGoogle =() =>{
-
         firebase.auth().signInWithPopup(provider)
         .then(result => {
- 
             const{displayName, photoURL, email} = result.user;
             const signedInUser ={
                 isSignedIn: true,
@@ -31,7 +37,9 @@ const Login = () => {
                 photo: photoURL,
             }
             setUser(signedInUser);
-            console.log(displayName,email, photoURL,);
+            setLoggedInUser(signedInUser);
+            history.replace(from);
+            // console.log(displayName,email, photoURL,);
 
             const token = result.credential.accessToken;
             const user = result.user;
@@ -41,7 +49,6 @@ const Login = () => {
             
             const errorCode = error.code;
             const errorMessage = error.message;
-            
             const email = error.email;
             const credential = error.credential;
 
