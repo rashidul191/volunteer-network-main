@@ -1,0 +1,35 @@
+.body-donation{
+    margin-top: 50px;
+    width: 100%;
+}
+.donation-style{
+    box-shadow: 1px 1px 5px 1px gray;
+    border-radius: 15px;
+    position: absolute;
+    height: 250px;
+    width: 35%;
+    display: flex;
+}
+
+.style-img img{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+.donation-text{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: black;
+}
+
+.donation-btn button{
+    margin-top: 180px;
+    border: none;
+    color: black;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(230, 220, 220);
+}

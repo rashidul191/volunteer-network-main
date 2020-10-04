@@ -1,0 +1,40 @@
+.body{
+    text-align: center;
+}
+
+.main-logo{
+    height: 50px;
+    margin-bottom: 2%;
+}
+
+.from-body{
+    border:1px solid gray;
+    height: 550px;
+    width: 35%;
+    padding-top: 50px;
+    margin: 0 auto;
+
+}
+.from-body h3{
+    text-align: center;
+}
+
+.regi-form{
+    margin: 30px 100px;
+}
+.regi-form input{
+    display: block;
+    margin-top: 30px;
+    padding: 5px;    
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid gray;
+    
+}
+.error{
+    color:red;
+}
+#regi-btn-style{
+    background-color: mediumblue;
+    color: white;
+}

@@ -57,7 +57,7 @@ const Login = () => {
           });
     }
     return (
-        <div>
+        <div className="body-login">
             <img className="mainLogo-style" src={mainLogo} alt=""/>
              <div className="container google-login-body">
                 <h5>Login With</h5>

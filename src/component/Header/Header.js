@@ -2,13 +2,18 @@ import React from 'react';
 import logo from '../logos/Group 1329.png';
 import './Header.css';
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 
 const Header = () => {
+
+    const history = useHistory()
+    const handleAdmin =() =>{
+        history.push('/admin');
+    }
     
     return (
-        <div className="bg-img">
+        <div className="container bg-img">
             <Navbar bg="" variant="light">
                 <Navbar.Brand href="#home"> <img className="main-logo" src={logo} alt=""/> </Navbar.Brand>
                 <Nav className="ml-auto">
@@ -19,7 +24,7 @@ const Header = () => {
                         <Link className="nav-style" to ="/blog">Blog</Link>                        
                     </div>
                     <Button className="nav-btn-style" variant="primary" >Register</Button>
-                    <Button className="nav-btn-style" variant="dark">Admin</Button>
+                    <Button className="nav-btn-style" onClick={handleAdmin} variant="dark">Admin</Button>
                 </Nav>
             </Navbar>
             <br/>

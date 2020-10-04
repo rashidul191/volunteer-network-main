@@ -7,11 +7,11 @@ const Home = () => {
     const history = useHistory()
     const handleRegister =() =>{
         history.push('/register');
-        console.log("Register click done...");
-}
+        
+    }
 
     return (
-        <div className="card-style">
+        <div className="container card-style">
             <CardDeck>
                 <Card>
                     <Card.Img variant="top" src="https://i.imgur.com/MvWhzrd.png" />

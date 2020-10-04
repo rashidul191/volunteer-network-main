@@ -3,12 +3,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+import Admin from './component/Admin/Admin';
+import Donation from './component/Donation/Donation';
 
 import Header from './component/Header/Header';
+import Header2 from './component/Header2/Header2';
 import Home from './component/Home/Home';
 import Login from './component/Login/Login';
+import NoMatch from './component/NoMatch/NoMatch';
 import PrivateRoute from './component/PrivateRout/PrivateRoute';
 import Register from './component/Register/Register';
 
@@ -18,7 +21,6 @@ function App() {
      const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
-      <h1>Email: {loggedInUser.email} </h1>
       <Router>
           <Switch>
             <Route exact path="/">
@@ -35,10 +37,27 @@ function App() {
               <Login/>
             </Route>
           </Switch>
+          
+          <Route path="/register">
+              <Register/>
+          </Route>
 
-          <PrivateRoute path="/register">
+          {/* <PrivateRoute path="/register">
             <Register/>
-          </PrivateRoute>
+          </PrivateRoute> */}
+
+          <Route path="/donation">
+              <Header2></Header2>
+              <Donation></Donation>
+          </Route>
+
+          <Route path="/admin">
+              <Admin> </Admin>
+          </Route>
+
+          {/* <Route path ="*">
+            <NoMatch></NoMatch>
+          </Route> */}
         
       </Router>
 
