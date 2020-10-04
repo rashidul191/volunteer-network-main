@@ -5,7 +5,7 @@ import { Card, CardDeck } from 'react-bootstrap';
 
 const Home = () => {
     return (
-        <div className="card-style container">
+        <div className="card-style">
             <CardDeck>
                 <Card>
                     <Card.Img variant="top" src="https://i.imgur.com/MvWhzrd.png" />

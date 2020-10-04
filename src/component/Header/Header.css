@@ -1,7 +1,10 @@
 .bg-img{
     background: url();
-    background-color: aqua;
+    border: 1px solid red;
 }
 .text-center{
     text-align: center;
+}
+.main-logo{
+    height: 50px;
 }
