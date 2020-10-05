@@ -52,7 +52,17 @@ const Login = () => {
 
             console.log(errorCode, errorMessage,email,credential);
             
-          });
+        });
+
+        // const storeAuthToken =() =>{
+        //     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+        //         // Send token to your backend via HTTPS
+        //         // ...
+        //       }).catch(function(error) {
+        //         // Handle error
+        //       });
+        // }
+
     }
     return (
         <div className="body-login">

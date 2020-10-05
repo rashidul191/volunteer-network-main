@@ -1,3 +1,76 @@
 .volunteer-body{
+    background-color: rgb(253, 253, 253);
+    height: 700px;
+    width: 100%;
+}
+.active{
+    color: black;
+    margin-top: 100px;
+}
+
+.active:active{
+    color: blue;
+}
+
+
+.active img{
+    height: 20px;
+    width: 20px;
+}
+
+.logo-body-part{
+    margin-right: 50px;
+    background-color: rgb(255, 255, 255);
+    height: 700px;
+    width: 20%;
+    float: left;
+}
+.list-text-part h3{
+    margin-left: 50px;
+    
+}
+
+.list-text-part{
+        background-color: white;
+        height: 700px;
+        width: 100%;
+}
+
+.list-out-body{
+    background-color: rgb(223, 236, 227);
+    margin: 50px;
+    height: 600px;
+    width: 95%;
+    margin-bottom: 20px;
+    
+}
+.list-part{
+    
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    height: 550px;
+    width: 94%;
+    
+}
+.text{
     display: flex;
+}
+
+.text-name{
+    margin-left: 40px;
+    float: left;
+}
+.text-logo{
+    margin-left: 40px;
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    float: left;
+}
+.text-name img{
+    background-color: red;
+}
+.style-part{
+    font-size: large;
+    color: blueviolet;
 }

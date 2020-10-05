@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Volunteerlist.css';
 import logo from '../logos/Group 1329.png';
+import manIcon from '../logos/users-alt 1.png';
+import plusIcon from '../logos/plus 1.png';
+import deleteIcon from '../logos/trash-2 9.png';
+import { Link } from 'react-router-dom';
 
 const VolunteerList = () => {
 
@@ -13,19 +17,35 @@ const VolunteerList = () => {
     },[])
     return (
         <div className="volunteer-body container">
-            <div>
+            <div className="logo-body-part">
                 <img className="main-logo" src={logo} alt=""/>
-                <p>Volunteer register list</p>
-                <p> Add Event</p>
+                <br/><br/><br/>
+                <Link className="active" to="/volunteerlist"><p> <img src={manIcon} alt=""/>  Volunteer register list</p></Link>
+                <Link className="active" to="/addevent"><p> <img src={plusIcon} alt=""/> Add Event</p></Link>
             </div>
 
-            <div>
-                <h3>you have: {registration.length}  register</h3>
-                {
-                    registration.map(regis => <div>
-                        <li> {regis.name} {regis.email}</li>
-                    </div> )
-                }
+            <div className="list-text-part">
+                <h3>Volunteer register list</h3>
+                <div className="list-out-body">
+                    <div className="list-part">
+                        <div>
+                            
+                        </div>
+                        {
+                            registration.map(regis => <div className="text">
+                                <div>
+                                    <p className="text-name"><span className="style-part">  Name :</span> {regis.name} </p>
+                                </div>
+                                <div>
+                                     <p className="text-name"><span className="style-part"> Email : </span>{regis.email}</p>
+                                </div>
+                                <div>
+                                    <img className="text-logo" src={deleteIcon} alt=""/>
+                                </div>
+                            </div> )
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     );
