@@ -21,7 +21,7 @@ const Register = () => {
 
         
         const registerData = {...loggedInUser,}
-        fetch('http://localhost:5000/addRegisterData',{
+        fetch('https://fast-falls-44055.herokuapp.com/addRegisterData',{
           method: 'POST',
           headers:{'Content-Type': 'application/json'},
           body: JSON.stringify(registerData)

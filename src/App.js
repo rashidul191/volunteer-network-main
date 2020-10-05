@@ -39,26 +39,23 @@ function App() {
             </Route>
           </Switch>
           
-          {/* <Route path="/register">
-              <Register/>
-          </Route> */}
 
           <PrivateRoute path="/register">
             <Register/>
           </PrivateRoute>
 
-          <Route path="/donation">
+          <PrivateRoute path="/donation">
               <Header2></Header2>
               <Donation></Donation>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/addevent">
+          <PrivateRoute path="/addevent">
             <AddEvent></AddEvent>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/volunteerlist">
+          <PrivateRoute path="/volunteerlist">
               <VolunteerList></VolunteerList>
-          </Route>
+          </PrivateRoute>
 
           {/* <Route path ="*">
             <NoMatch></NoMatch>

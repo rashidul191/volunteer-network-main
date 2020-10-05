@@ -13,7 +13,7 @@ const Home = () => {
 
 
         const dataPas = {...dataInfo};
-        fetch('http://localhost:5000/addFakeData',{
+        fetch('https://fast-falls-44055.herokuapp.com/addFakeData',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(dataPas)

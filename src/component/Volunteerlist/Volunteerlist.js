@@ -11,7 +11,7 @@ const VolunteerList = () => {
     const [registration, setRegistration] = useState([]); 
 
     useEffect(() =>{
-        fetch('http://localhost:5000/registration')
+        fetch('https://fast-falls-44055.herokuapp.com/registration')
         .then(res => res.json())
         .then(data => setRegistration(data));
     },[])
