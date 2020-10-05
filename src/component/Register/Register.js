@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 
 const Register = () => {
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, errors } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const onSubmit = data => {
       console.log('form submit',data)
@@ -18,6 +18,18 @@ const Register = () => {
     const history = useHistory()
     const handleBtn =() =>{
         history.push('/donation');
+
+        
+        const registerData = {...loggedInUser,}
+        fetch('http://localhost:5000/addRegisterData',{
+          method: 'POST',
+          headers:{'Content-Type': 'application/json'},
+          body: JSON.stringify(registerData)
+        })
+        .then(res => res.json())
+        .then(date =>{
+          console.log(date);
+        })
     }
 
   return (

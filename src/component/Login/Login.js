@@ -16,7 +16,6 @@ const Login = () => {
         isSignedIn: false,
         name: '',
         email:'',
-        photo:'',
     })
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -29,17 +28,16 @@ const Login = () => {
     const handleGoogle =() =>{
         firebase.auth().signInWithPopup(provider)
         .then(result => {
-            const{displayName, photoURL, email} = result.user;
+            const{displayName, photoURL,  email} = result.user;
             const signedInUser ={
-                isSignedIn: true,
+                // isSignedIn: true,
                 name: displayName,
                 email: email,
-                photo: photoURL,
+                // photo: photoURL,
             }
             setUser(signedInUser);
             setLoggedInUser(signedInUser);
             history.replace(from);
-            // console.log(displayName,email, photoURL,);
 
             const token = result.credential.accessToken;
             const user = result.user;

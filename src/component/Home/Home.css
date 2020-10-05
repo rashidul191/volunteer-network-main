@@ -1,5 +1,25 @@
-.card-style{
+.data--body-style{
+    height: 600px;
+    width: 100%;
+    display: flex;
+}
+.data-component{
+    height: 380px;
+    width: 30%;
+    text-align: center;
+
+}
+.card-style-img{
     margin-top: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    height: 300px;
+    width: 85%;
+}
+.card-style h5{
+    text-align: center;
+    background-color: coral;
+    border-radius:0 0px 10px 10px ;
+    height: 50px;
+    margin: 0 auto;
+    width: 85%;
+    color: white;
 }

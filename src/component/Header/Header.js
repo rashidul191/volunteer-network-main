@@ -9,7 +9,7 @@ const Header = () => {
 
     const history = useHistory()
     const handleAdmin =() =>{
-        history.push('/admin');
+        history.push('/volunteerlist');
     }
     
     return (
